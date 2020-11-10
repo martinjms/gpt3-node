@@ -1,0 +1,26 @@
+<script type="text/javascript">
+	RED.nodes.registerType("gpt3-dialog", {
+		category: "function",
+		color: "#a6bbcf",
+		defaults: {
+			name: { value: "" },
+		},
+		inputs: 1,
+		outputs: 1,
+		icon: "file.png",
+		label: function () {
+			return this.name || "gpt3-dialog"
+		},
+	})
+</script>
+
+<script type="text/html" data-template-name="gpt3-dialog">
+	<div class="form-row">
+		<label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name" />
+	</div>
+</script>
+
+<script type="text/html" data-help-name="gpt3-dialog">
+	<p>A simple node that receives text and send it to gpt3</p>
+</script>
